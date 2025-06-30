@@ -1,0 +1,121 @@
+/*RESET*/
+/* http://meyerweb.com/eric/tools/css/reset/*/
+/* v2.0 | 20110126 -> Versão 2.0 do reset publicada em 26 de janeiro de 2011*/
+/* License: none (public domain) -> Licença: nenhuma (domínio público), indicando que pode ser usada livremente*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
+  margin: 0; /*remove a margem padrão*/
+  padding: 0; /*remove o preenchimento padrão*/
+  border: 0; /*remove a borda padrão*/
+  font-size: 100%; /*define o tamanho da fonte para 100% (o padrão do elemento pai)*/
+  font: inherit; /*faz com que a propriedade font herde do elemento pai*/
+  vertical-align: baseline; /*define o alinhamento vertical padrão para a linha de base*/
+}
+/*HTML5 display-role reset for older browsers*/
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; /*define o 'display' desses elementos HTML5 para block, garantindo que se comportem como elementos de bloco em navegadores mais antigos*/
+}
+body {
+  line-height: 1; /*define a altura da linha padrão para 1 (sem espaçamento adicional)*/
+}
+ol, ul {
+  list-style: none; /*remove os estilos de lista padrão (bolinhas ou números)*/
+}
+blockquote, q {
+  quotes: none; /*remove as aspas padrão para elementos de citação*/
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: ''; /*remove qualquer conteúdo gerado automaticamente antes e depois das citações*/
+  content: none; /*garante que nenhum conteúdo seja exibido*/
+}
+table {
+  border-collapse: collapse; /*colapsa as bordas de células adjacentes em uma única borda*/
+  border-spacing: 0; /*remove o espaçamento entre as células da tabela*/
+}
+
+/*INICIO*/
+body {
+  font-family: "Roboto", sans-serif;/*define a fonte padrão para todo o corpo do documento como Roboto, com sans-serif como fallback */
+  margin: 0;/*remove a margem padrão do navegador para o corpo da página */
+  padding: 0;/*remove o padding padrão do navegador para o corpo da página */
+  background-color: #f1f1f1;/*refine a cor de fundo da página como um cinza claro */
+}
+/* Estilo geral do header */
+.header-row {
+  display: flex;/*transforma o contêiner em um flex container para organizar seus itens */
+  flex-direction: column;/*faz com que os itens dentro do header-row fiquem um abaixo do outro */
+  align-items: center;/*centraliza horizontalmente os itens (logo e texto) dentro da coluna */
+  justify-content: center;/*centraliza verticalmente os itens (se houver espaço sobrando) */
+  padding: 10px;/*adiciona um padding interno de 8px em todos os lados da linha do cabeçalho */
+}
+/* Logo responsivo */
+.logo-img {
+  height: 80px;/*define uma altura fixa de 80px para a imagem do logo/brasão */
+  width: auto;/*permite que a largura da imagem se ajuste automaticamente para manter a proporção */
+  max-width: 100%;/*garante que a imagem não ultrapasse a largura do seu contêiner pai */
+  margin-bottom: 10px;/*adiciona um espaço de 10px abaixo da imagem do logo */
+}
+/*título responsivo*/
+.header-text {
+  text-align: center;/*centraliza o texto (h1 e p) dentro da div header-text */
+  Width: 100%;/*garante que a div header-text ocupe toda a largura disponível */
+}
+.header-text h1{
+  margin: 0;/*remove as margens padrão do título h1 */
+  font-size: 1.8em;/*define o tamanho da fonte do h1 em relação ao tamanho da fonte padrão do pai */
+}
+.header-text p {/*estilo para o subtítulo */
+  margin: 5px 0 0 0;/*define uma margem superior de 5px para o parágrafo (subtítulo), e 0 para os outros lados */
+  font-size: 1.1em;/*define o tamanho da fonte do parágrafo em relação ao tamanho da fonte padrão do pai */
+}
+/*ajuste em telas pequenas*/
+@media (max-width: 600px) {/*aplica os estilos abaixo quando a largura da tela for no máximo 600px */
+    .header-row {
+    flex-direction: column;/*garante que os itens do cabeçalho continuem em coluna em telas pequenas */
+    text-align: center;/*centraliza o texto dentro da linha do cabeçalho para telas pequenas */
+  }
+    .header-text h1 {
+    font-size: 1.5em;/*reduz o tamanho da fonte do h1 para telas menores */
+  }
+}
+.w3-row-padding {
+  display: flex;/*transforma o contêiner em um flex container */
+  flex-wrap: wrap;/*permite que os itens quebrem para a próxima linha se não houver espaço suficiente */
+  justify-content: space-between;/*distribui os itens uniformemente ao longo da linha, com espaço entre eles */
+}
+.card-box {
+  background: white;/*define o fundo do card como branco */
+  padding: 5px;/*adiciona um padding interno de 5px em todos os lados do card */
+  flex-direction: column;/*organiza os itens dentro do card em uma coluna */
+  justify-content: space-between;/*distribui o conteúdo verticalmente dentro do card */
+  width: 100%;/*faz com que o card ocupe 100% da largura disponível do seu contêiner pai */
+  height: 100%;/*faz com que o card ocupe 100% da altura disponível do seu contêiner pai */
+  min-height: 480px;/*define uma altura mínima de 400px para o card */
+}
+.h2{
+  font-size: 20px;/*tamanho da fonte do h2*/
+  padding: 15px;/*adiciona um padding interno de 15px*/
+}
+.card-box figure {
+  margin: 0 auto;/*remove a margem padrão e centraliza a figura horizontalmente */
+  height: 220px;/*define uma altura padronizada de 220px para todas as figuras dentro dos cards */
+  display: flex;/*transforma a figura em um flex container */
+  justify-content: center;/*centraliza horizontalmente o conteúdo da figura (imagem) */
+  align-items: center;/*centraliza verticalmente o conteúdo da figura (imagem) */
+  overflow: hidden;/*oculta qualquer parte da imagem que exceda as dimensões da figura */
+}
+.card-box figure img {
+  max-height: 200px;/*limita a altura máxima da imagem para 200px */
+  width: auto;/*permite que a largura da imagem se ajuste automaticamente para manter a proporção */
+  max-width: 100%;/*garante que a imagem não ultrapasse a largura do seu contêiner pai */
+  object-fit: contain;/*redimensiona a imagem para caber inteiramente dentro do seu contêiner, mantendo a proporção */
+}
+.card-box figcaption{
+  padding: 10px;/*adiciona um padding interno de 10px */
+}
+.rodape{
+  height: 80px;/*define uma altura padronizada de 80px para o rdapé */
+}
+.rodape p{
+  padding-top: 20px;/*adiciona um espaçamento padding no topo de 20px */
+}
