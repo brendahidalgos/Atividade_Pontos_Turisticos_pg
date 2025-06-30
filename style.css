@@ -1,0 +1,116 @@
+body {
+    font-family:sans-serif;/*define a fonte a ser utilizada*/
+    margin:0;/*margem total em 0 pixels*/
+    background-color:#fffbf6;/*cor do fundo - bege*/
+    color:#eee;/*cor do texto*/
+}
+
+header {
+    background-color:#B22222; /*cor do fundo - vermelho*/
+    padding:30px 20px;/*espaçamento interno em pixels*/
+    text-align:center;/*centralizando o texto*/
+}
+
+header h1 {
+	font-size:2.5em;/*tamanho da fonteo elemento filho será 2.5 vezes o tamanho da fonte do pai*/
+	margin:0;/*margem em 0 pixels*/
+	color:#FFFFFF; /*cor do título branco*/
+	font-family:serif;/*fonte serifada para o título*/
+}
+
+.container {
+	display:flex;/*conainer flexivel*/
+	flex-wrap: wrap;/* Permite que as colunas quebrem para a próxima linha em telas menores */
+	padding:20px;/*espaçamento interno em 20 pixels*/
+	justify-content:space-around; /*espaço entre as colunas*/
+}
+.etapa {
+	background-color:#B22222;/*cor de fundo das seções - vermelho*/
+	border-radius:8px;/*borda arredondada em 8 pixels*/
+	margin:10px;/*margem em 10 pixels*/
+	padding:15px;/*espaçamento interno em 15 pixels*/
+	text-align:center;/*alinhamento de texto centralizado*/
+	box-shadow:0 4px 8px rgba(0, 0, 0, 0.5);/*sombra ao redor*/
+	width:calc(20% - 20px); /*aproximadamente 5 colunas com algum espaço entre elas*/
+	box-sizing:border-box;/*garante que a largura de calc(20% - 20px) seja o tamanho total da seção*/
+}
+
+.etapa h2 {
+	color:#FFFFFF;/*cor do texto*/
+	font-size:1.5em;/*tamanho da fonte - o elemento filho será 1.5 vezes o tamanho da fonte do pai*/
+	margin-top:0;/*margem superior*/
+	margin-bottom:10px;/*margem inferior*/
+	border-bottom:1px solid #FFFFFF;/*borda inferior de 1 pixel na cor solido branco*/
+	padding-bottom:5px;/*define o espaçamento interno na parte inferior de 5 pixels*/
+}
+.galeria {
+	display:flex;/*conainer flexivel*/
+	flex-direction:column;/*alinha os itens da galeria em coluna*/
+	gap:10px;/*espaçamento entre as imagens de 10 pixels*/
+	margin-top:10px;/*margem superior de 10 pixels*/
+}
+.galeria img {
+	width: 100%;/*largura em 100%*/
+	height: auto;/*altura automático*/
+	border-radius: 4px;/*arredondamento de bordas em 4 pixels*/
+	box-shadow: 0 2px 4px #FFFFFF;/*sombra na borda da imagem*/
+	transition: transform 0.3s ease-in-out;/*define qual propriedade será animada, a duração da animação e a curva de velocidade da animação*/
+	margin-bottom: 10px; /* Adiciona um espaço extra abaixo de cada imagem*/
+}
+.galeria img:last-child {
+	margin-bottom: 0; /* Remove a margem inferior da última imagem para evitar espaço extra no final */
+}
+footer {
+    background-color: #B22222;/*cor do fundo - vermelho*/
+    color: #eee;/*cor da letra*/
+    text-align: center;/*texto alinhado centralizado*/
+    padding: 15px;/*espaçamento interno de 15 pixels*/
+    position: static;/*em um elemento é geralmente redundante, pois esse é o comportamento padrão*/
+    width: 100%;/*define a largura de um elemento HTML para ser igual a 100%*/
+    box-sizing: border-box;/*muda a forma como a largura e a altura de um elemento são calculadas*/
+    margin-top: 20px;/*margem superior de 20 pixels*/
+}
+/*estilos para telas menores (tornando as seções em linhas)*/
+@media (max-width: 768px) {/*especifica que os estilos dentro dessas chaves {} serão aplicados apenas quando a largura máxima da tela do dispositivo for de 768 pixels*/
+	.container {
+        flex-direction: column;/*seleciona o elemento com a classe container e define a sua propriedade flex-direction como column*/
+	}
+	.etapa {
+        width: 100%;/*define a largura de cada seção .etapa para ocupar 100% da largura do seu elemento pai (que é o .container)*/
+        margin-bottom: 20px;/*adiciona uma margem inferior de 20 pixels a cada seção .etapa*/
+    }
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/*/
+/* v2.0 | 20110126 -> Versão 2.0 do reset publicada em 26 de janeiro de 2011*/
+/* License: none (public domain) -> Licença: nenhuma (domínio público), indicando que pode ser usada livremente*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
+  margin: 0; /*remove a margem padrão*/
+  padding: 0; /*remove o preenchimento padrão*/
+  border: 0; /*remove a borda padrão*/
+  font-size: 100%; /*define o tamanho da fonte para 100% (o padrão do elemento pai)*/
+  font: inherit; /*faz com que a propriedade font herde do elemento pai*/
+  vertical-align: baseline; /*define o alinhamento vertical padrão para a linha de base*/
+}
+/*HTML5 display-role reset for older browsers*/
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; /*define o 'display' desses elementos HTML5 para block, garantindo que se comportem como elementos de bloco em navegadores mais antigos*/
+}
+body {
+  line-height: 1; /*define a altura da linha padrão para 1 (sem espaçamento adicional)*/
+}
+ol, ul {
+  list-style: none; /*remove os estilos de lista padrão (bolinhas ou números)*/
+}
+blockquote, q {
+  quotes: none; /*remove as aspas padrão para elementos de citação*/
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: ''; /*remove qualquer conteúdo gerado automaticamente antes e depois das citações*/
+  content: none; /*garante que nenhum conteúdo seja exibido*/
+}
+table {
+  border-collapse: collapse; /*colapsa as bordas de células adjacentes em uma única borda*/
+  border-spacing: 0; /*remove o espaçamento entre as células da tabela*/
+}
